@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>巴拉巴拉小魔仙</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container{
+      	display:table;
+      	height:100%;
+      }
+
+      .row{
+      	display: table-cell;
+      	vertical-align: middle;
+      }
+
+      /* centered columns styles */
+      .row-centered {
+      	text-align:center;
+      }
+      .col-centered {
+      	display:inline-block;
+      	float:none;
+      	text-align:left;
+      	margin-right:-4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row row-centered">
+        <div class="well col-md-6 col-centered">
+          <h1 class="text-center">林则徐小学学籍信息查询</h1>
+          <p class="text-warning">本应用只提供简单的学籍信息查询功能，如果有疑问或其他问题请及时联系班主任老师。</p>
+          <form class="form-horizontal"  action="/status" method="get">
+            <div class="control-group">
+              <label class="control-label" for="grade">年级</label>
+              <div class="controls">
+                <select id="grade" name="grade">
+                  <option selected='true' value='1'>一年级</option>
+                  <option value='2'>二年级</option>
+                  <option value='3'>三年级</option>
+                  <option value='4'>四年级</option>
+                  <option value='5'>五年级</option>
+                  <option value='6'>六年级</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="classes">班级</label>
+              <div class="controls">
+                <select id="classes" name="classes">
+                  <option value='1'>一班</option>
+                  <option value='2'>二班</option>
+                  <option value='3'>三班</option>
+                  <option selected='true' value='4'>四班</option>
+                  <option value='5'>五班</option>
+                  <option value='6'>六班</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id">身份证件号</label>
+              <div class="controls">
+                <input type="text" id="id" name="id" placeholder="身份证件号">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button type="submit" class="btn btn-info">查询</button>
+              </div>
+            </div>
+          </form>
+          <p class="text-warning">该系统为公益项目，不对信息的真实性和安全性负责。</p>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

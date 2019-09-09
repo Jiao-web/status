@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>巴拉巴拉小魔仙</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center"><%= data.姓名 %></h1>
+      <div class="text-right"><a class="btn btn-primary" href="/">返回</a></div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>字段</th>
+            <th>信息</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var key in data){ %>
+          <%  if(key.length < 30 && data[key].length > 0) { %>
+            <tr>
+              <td><%= key %></td>
+              <td><%= data[key] %></td>
+            </tr>
+          <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
